@@ -2,7 +2,7 @@ import { faker } from '@faker-js/faker'
 
 
 
-export function getData() {
+export function useGetData() {
     const brands = ['H&N', 'Zara', 'Zudio']
     const products = [];
   for (let i = 0; i < 10; i++) {
