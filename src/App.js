@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import { getData } from "./components/getData";
+import { filterProducts } from "./components/filters";
 
 function App() {
+
+let data = getData()
+let filter =  filterProducts(data, [ 0 , Infinity ], [ 5] , ['H&N', 'Zara'])
+
+console.log(data)
+console.log(filter)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+
     </div>
   );
 }
