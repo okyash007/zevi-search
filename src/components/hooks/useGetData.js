@@ -3,9 +3,10 @@ import { faker } from '@faker-js/faker'
 
 
 export function useGetData() {
+
     const brands = ['H&N', 'Zara', 'Zudio']
     const products = [];
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < 100; i++) {
     const product = {
       id: faker.string.uuid(),
       name: faker.commerce.productName(),
@@ -18,5 +19,8 @@ export function useGetData() {
     };
     products.push(product);
   }
+
+
+
   return products
 }
