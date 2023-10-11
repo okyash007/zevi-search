@@ -66,7 +66,7 @@ const Products = () => {
               </div>
             </div>
           </div>
-          <div className="h-12 absolute w-full bottom-0 opacity-0 hover:opacity-75 bg-blue-700 z-20 flex justify-center items-center"><p className="text-white ">View Product</p></div>
+          <p className="text-white w-full h-12 absolute bottom-0 bg-blue-700 flex justify-center items-center opacity-0 bg-opacity-0 hover:bg-opacity-60 hover:opacity-100">View Product</p>
             <img src={m.image} className="w-56" alt="" />
           </div>
 
