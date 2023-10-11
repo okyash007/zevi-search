@@ -22,8 +22,10 @@ const Products = () => {
   let starts = getStars(3);
   console.log(starts);
 
+  if(displayData == null)  { return <div className="w-4/5 h-screen"></div>}
+
   return (
-    <div className="flex flex-wrap w-4/5 overflow-y-scroll h-screen">
+    <div className="flex flex-wrap w-4/5 overflow-y-scroll h-[85vh]">
       {displayData.map((m) => (
         <div className=" m-6" key={m.id}>
           <img src={m.image} className="w-56" alt="" />

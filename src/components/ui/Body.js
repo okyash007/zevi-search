@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import Filters from "./Filters";
 import Products from "./Products";
 import { bgURL, zeviLOGO } from "../utils/cdn";
@@ -66,9 +66,9 @@ const Body = () => {
           onBlur={() => setRecomend(false)}
         />
       </div>
-      <div className="flex">{(recomend && !products )  && <Recomend />}
-      { products && <div className="flex"><Filters/><Products/> </div> }
-      </div>
+      {(recomend && !products )  && <Recomend />}
+      { products && <div className="flex w-screen"><Filters/><Products/> </div> }
+      
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { filterProducts } from "../utils/filters";
-import { addDisplayProducts, addFilterProducts } from "../store/productSlice";
+import { addDisplayProducts } from "../store/productSlice";
 import { blackStar, goldStar } from "../utils/cdn";
 
 const Filters = () => {
@@ -26,7 +26,7 @@ const Filters = () => {
   const [brands, setBrands] = useState([]);
   const [price, setPrice] = useState([]);
 
-  const filterData = filterProducts(data, price, ratings, brands);
+  filterProducts(data, price, ratings, brands);
   // console.log(price);
   // console.log(filterData);
 
