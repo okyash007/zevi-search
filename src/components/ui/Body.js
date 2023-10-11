@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import Filters from "./Filters";
 import Products from "./Products";
-import { bgURL } from "../utils/cdn";
+import { bgURL, zeviLOGO } from "../utils/cdn";
 import Recomend from "./Recomend";
 
 const Body = () => {
@@ -19,6 +19,7 @@ const Body = () => {
 
   return (
     <div className="flex flex-col items-center " >
+        <img src={zeviLOGO} className="z-20 w-20 m-4 absolute right-0" alt="" />
         { !products && <img src={bgURL} className="absolute" alt="" />}
       
       <div className={"w-2/3 relative p-6 "+ mt }>
