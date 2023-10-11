@@ -11,14 +11,14 @@ const Body = () => {
   function handleCLick() {
     return setProducts(true);
   }
-  let mt = "mt-12" 
+  let mt = "mt-24" 
 
   if(products) {
     mt = "mt-0" 
   } 
 
   return (
-    <div className="flex flex-col items-center " >
+    <div className="flex flex-col items-center mt-" >
         <img src={zeviLOGO} className="z-20 w-20 m-4 absolute right-0" alt="" />
         { !products && <img src={bgURL} className="absolute" alt="" />}
       
