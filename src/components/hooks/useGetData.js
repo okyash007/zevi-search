@@ -15,6 +15,7 @@ export function useGetData() {
       image: faker.image.urlLoremFlickr({ category: 'fashion', height: 600 , width: 400 }),
       material: faker.commerce.productMaterial(),
       rating: Math.floor(Math.random() * 5) + 1,
+      numberOfRatings: Math.floor(Math.random() * 1000),
       brand: brands[Math.floor(Math.random() * brands.length)],
     };
     products.push(product);

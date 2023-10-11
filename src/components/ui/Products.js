@@ -25,7 +25,7 @@ const Products = () => {
   return (
     <div className="flex flex-wrap w-4/5 overflow-y-scroll h-screen">
       {displayData.map((m) => (
-        <div className=" m-6">
+        <div className=" m-6" key={m.id}>
           <img src={m.image} className="w-56" alt="" />
           <h1 className="font-medium pt-3">{m.name}</h1>
           <div className="flex">
@@ -34,9 +34,13 @@ const Products = () => {
             </p>
             <p className="text-[#6D84FF] font-semibold">Rs.{m.price}</p>
           </div>
+          <div className="flex">
           <div className="flex">{
-            getStars(m.rating).map( i => <img src={i} className="w-4 mr-1" alt="" /> )
-            }</div>
+            getStars(m.rating).map( (i, index) => <img key={index} src={i}  className="w-4 mr-1" alt="" /> )
+            }
+            </div>
+            <div><p className="text-xs">{ "(" + m.numberOfRatings +")" }</p></div>
+            </div>
         </div>
       ))}
     </div>
