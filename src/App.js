@@ -8,7 +8,7 @@ function App() {
 
   const dispatch = useDispatch()
   const data = useGetData()
-  dispatch( addFilterProducts )
+  dispatch( addFilterProducts(data) )
 
 
 
